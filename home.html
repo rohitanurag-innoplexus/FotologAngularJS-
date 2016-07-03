@@ -1,0 +1,33 @@
+
+        <Section>
+
+
+
+            <ul  class="list" ng-controller="mainController">
+                <!-- A compact view smaller photos and titles -->
+                <li ng-repeat="p in pics | filter:test">
+                    <a href="../Controller/#/userdetails"  ng-click="layout = 'hehe';save(p.user_id,p.user_id_link,p.state,p.city,p.sex_details,p.joining_date,p.user_image,p.country)"><img ng-src="{{p.user_image}}" /></a>
+                    <p><strong>UserID:</strong> {{p.user_id}}</p>
+                    <br>
+                    <p><strong>Sex:</strong> {{p.sex_details}}</p>
+                    <br>
+
+                    <button  ng-click="toggle = !toggle; IsVisible = !IsVisible">{{toggle && 'More+' || 'Less-'}}</button>
+
+                    <div ng-show = "IsVisible">
+                    <br>
+                    <p><strong>City:</strong> {{p.city}}</p>
+                    <br>
+                    <p><strong>State:</strong> {{p.state}}</p>
+                    <br>
+
+                    <p><strong>Country:</strong> {{p.country}}</p>
+
+                    <br>
+                    <p><strong>Fotolog Joining Date:</strong> {{ p.joining_date | date: 'yyyy-MM-dd HH:mm:ss' }}</p>
+                    </div>
+                </li>
+            </ul>
+
+
+        </section>

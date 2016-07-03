@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Instafeed</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+    <body ng-app="mymodule">
+        <section >
+
+
+            <div class="bar">
+   <table style='margin-left: auto; margin-right: auto'>
+        <tr>
+           <td>
+              <div><right><h1>Fotolog Feed Using AngularJs</h1></right> </div>
+           </td>
+           <td>
+             <div><input placeholder="Search User" type="text" ng-model="test.user_id">
+
+ </div>
+           </td>
+        </tr>
+   </table>
+
+
+
+
+            </div>
+
+
+
+
+
+    <div ng-view></div>
+
+
+    <style>
+    table, th, td {
+        border: 1px solid #5796B1 ;
+
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        text-align: left;
+    }
+    </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+
+        <script src="js/application.js"></script>
+    </body>
+</html>
